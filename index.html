@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exchange</title>
+</head>
+
+<body>
+  <form id="divisas" name="divisas">
+    <input id="fecha" name="fecha" type="date" placeholder="fecha" min="1999-01-01">
+    <select name="divisa-base" id="base">
+      <option value="0">Seleccione una divisa base</option>
+    </select>
+    <input id="calcular" type="submit" value="calcular">
+    <div class="contenedor">
+      <ul id="lista">
+      </ul>
+    </div>
+  </form>
+  <script src="src/index.js"></script>
+</body>
+
+</html>
