@@ -1,5 +1,5 @@
 const URL = "https://api.exchangerate.host";
-//https://api.exchangerate.host/2020-04-04?base=ARS
+
 const $formulario = document.divisas;
 console.log($formulario);
 const $divisaBase = $formulario.base.value;
@@ -9,8 +9,6 @@ const fecha = new Date();
 const fechaActual = fecha.toISOString().split("T")[0];
 const $fecha = $formulario.fecha;
 $fecha.max = fechaActual;
-
-//document.querySelector("button").onclick = prueba;
 
 function setearDivisas(divisas) {
   const divisasTotales = Object.keys(divisas);
