@@ -6,14 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exchange</title>
+  <link rel="stylesheet" href="src/index.css">
 </head>
 
 <body>
   <form id="divisas" name="divisas">
-    <input id="fecha" name="fecha" type="date" placeholder="fecha" min="1999-01-01">
-    <select name="divisa-base" id="base">
-      <option value="0">Seleccione una divisa base</option>
-    </select>
+    <div>
+      <input id="fecha" name="fecha" type="date" placeholder="fecha" min="1999-01-01">
+      <ul class="errores"></ul>
+    </div>
+    <div>
+      <select name="divisa-base" id="base">
+        <option value="0">Seleccione una divisa base</option>
+      </select>
+      <ul class="errores"></ul>
+    </div>
     <input id="calcular" type="submit" value="calcular">
     <div class="contenedor">
       <ul id="lista">
@@ -21,6 +28,7 @@
     </div>
   </form>
   <script src="src/index.js"></script>
+  <script src="src/pruebas.js"></script>
 </body>
 
 </html>
