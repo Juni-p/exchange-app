@@ -1,10 +1,9 @@
 function validarFecha(fecha) {
-  const regex =
-    /^(19│20)\d\d[- .](0[1-9]│1[012])[- .](0[1-9]│[12][0-9]│3[01])$/;
+  const formatoFecha = /^\d{4}-\d{2}-\d{2}$/;
   if (fecha.length === 0) {
     return "Este campo no puede estar vacío.";
   }
-  if (regex.test(fecha)) {
+  if (!formatoFecha.test(fecha)) {
     return "Este campo debe tener un formato de fecha valido.";
   }
   return "";
@@ -18,9 +17,6 @@ function validarDivisaBase(divisa) {
 }
 
 const URL = "https://api.exchangerate.host";
-
-setearFechaActual();
-obtenerDivisas();
 
 function setearDivisas(divisas) {
   const divisasTotales = Object.keys(divisas);
@@ -77,7 +73,6 @@ function validarFormulario(event) {
   const $formulario = document.divisas;
   const $divisaBase = $formulario["divisa-base"].value;
   const $fecha = $formulario.fecha.value;
-  console.log($fecha);
 
   const errorFecha = validarFecha($fecha);
   const errorDivisaBase = validarDivisaBase($divisaBase);
