@@ -18,6 +18,9 @@ function validarDivisaBase(divisa) {
 
 const URL = "https://api.exchangerate.host";
 
+setearFechaActual();
+obtenerDivisas();
+
 function setearDivisas(divisas) {
   const divisasTotales = Object.keys(divisas);
   divisasTotales.forEach((divisa) => {
