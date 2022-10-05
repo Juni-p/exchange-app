@@ -50,6 +50,7 @@ function obtenerDivisas() {
 
 function crearItemLista(divisa, valor) {
   const $item = document.createElement("li");
+  $item.classList.add("item-divisa");
   $item.textContent = `${divisa}: ${valor}`;
   document.querySelector("#lista").appendChild($item);
 }
@@ -115,6 +116,7 @@ function manejarErrores(errores) {
       document.divisas[llave].classList.add("error");
 
       const $error = document.createElement("li");
+      $error.classList.add("item-error");
       $error.textContent = error;
 
       $errores[index].appendChild($error);
