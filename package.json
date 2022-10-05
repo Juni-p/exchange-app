@@ -1,0 +1,28 @@
+{
+  "name": "exchange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c -1",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juni-p/exchange-app.git"
+  },
+  "keywords": [],
+  "author": "Junior Vitteri <vitteri81@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Juni-p/exchange-app/issues"
+  },
+  "homepage": "https://github.com/Juni-p/exchange-app#readme",
+  "devDependencies": {
+    "cypress": "^10.9.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
